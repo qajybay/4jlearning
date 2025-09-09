@@ -4,9 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.time.LocalDate;
-import java.util.*;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.ThreadPoolExecutor;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Demo1 {
@@ -29,11 +28,7 @@ public class Demo1 {
                         .comparingInt((User u) -> u.getName().length()).reversed())
                 .collect(Collectors.toList())
                 .forEach(System.out::println);
-
-
-//        ThreadPoolExecutor;
-//        Iterator
-//        HashMap
+        
     }
 
     @Data
